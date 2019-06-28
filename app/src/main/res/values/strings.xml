@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Together</string>
+    <string name="test_name">Gym 1</string>
+    <string name="test_score">4.3</string>
+    <string name="type">Type</string>
+    <string name="sort"></string>
+    <string name="Score">Min score</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="test_description">Bla bla bla bla bla bla bla\nBla bla bla bla</string>
+</resources>

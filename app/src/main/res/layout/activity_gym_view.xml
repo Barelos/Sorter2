@@ -1,0 +1,1344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".GymViewActivity"
+    android:padding="10dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:orientation="horizontal"
+                android:paddingStart="20dp"
+                android:paddingTop="20dp"
+                android:paddingEnd="20dp"
+                android:weightSum="1">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/icon"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="0.25"
+                    app:srcCompat="@drawable/tennis" />
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.25"
+                    android:text="@string/test_name"
+                    android:textColor="@color/Black"
+                    android:textSize="40sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.25"
+                    android:text="@string/test_score"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/Black"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="0.25"
+                    app:srcCompat="@drawable/star" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:text="@string/type"
+                android:textColor="@color/Black"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <!--<LinearLayout-->
+            <!--android:id="@+id/capacity"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="500dp"-->
+            <!--android:layout_weight="0.5"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:weightSum="19">-->
+
+            <!--<LinearLayout-->
+            <!--android:id="@+id/bar06"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:orientation="vertical"-->
+            <!--android:weightSum="1">-->
+
+            <!--<ImageView-->
+            <!--android:id="@+id/empty06"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="100"-->
+            <!--android:background="@color/White"-->
+            <!--tools:srcCompat="@color/White" />-->
+
+            <!--<ImageView-->
+            <!--android:id="@+id/full06"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="0"-->
+            <!--android:background="@color/Black"-->
+            <!--tools:srcCompat="@color/Black" />-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/time06"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="5"-->
+            <!--android:text="06"-->
+            <!--android:textAlignment="center"-->
+            <!--android:textColor="@color/Black"-->
+            <!--android:textSize="16sp"-->
+            <!--android:textStyle="bold" />-->
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+            <!--android:id="@+id/bar07"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:orientation="vertical"-->
+            <!--android:weightSum="110">-->
+
+            <!--<ImageView-->
+            <!--android:id="@+id/empty07"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="100"-->
+            <!--android:background="@color/White"-->
+            <!--tools:srcCompat="@color/White" />-->
+
+            <!--<ImageView-->
+            <!--android:id="@+id/full07"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="0"-->
+            <!--android:background="@color/Black"-->
+            <!--tools:srcCompat="@color/Black" />-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/time07"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="5"-->
+            <!--android:text="07"-->
+            <!--android:textAlignment="center"-->
+            <!--android:textColor="@color/Black"-->
+            <!--android:textSize="16sp"-->
+            <!--android:textStyle="bold" />-->
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+            <!--android:id="@+id/bar08"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:orientation="vertical"-->
+            <!--android:weightSum="110">-->
+
+            <!--<ImageView-->
+            <!--android:id="@+id/empty08"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="100"-->
+            <!--android:background="@color/White"-->
+            <!--tools:srcCompat="@color/White" />-->
+
+            <!--<ImageView-->
+            <!--android:id="@+id/full08"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="0"-->
+            <!--android:background="@color/Black"-->
+            <!--tools:srcCompat="@color/Black" />-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/time08"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="5"-->
+            <!--android:text="08"-->
+            <!--android:textAlignment="center"-->
+            <!--android:textColor="@color/Black"-->
+            <!--android:textSize="16sp"-->
+            <!--android:textStyle="bold" />-->
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+            <!--android:id="@+id/bar09"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:orientation="vertical"-->
+            <!--android:weightSum="110">-->
+
+            <!--<ImageView-->
+            <!--android:id="@+id/empty09"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="100"-->
+            <!--android:background="@color/White"-->
+            <!--tools:srcCompat="@color/White" />-->
+
+            <!--<ImageView-->
+            <!--android:id="@+id/full09"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="0"-->
+            <!--android:background="@color/Black"-->
+            <!--tools:srcCompat="@color/Black" />-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/time09"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="5"-->
+            <!--android:text="09"-->
+            <!--android:textAlignment="center"-->
+            <!--android:textColor="@color/Black"-->
+            <!--android:textSize="16sp"-->
+            <!--android:textStyle="bold" />-->
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+            <!--android:id="@+id/bar10"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:orientation="vertical"-->
+            <!--android:weightSum="110">-->
+
+            <!--<ImageView-->
+            <!--android:id="@+id/empty10"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="100"-->
+            <!--android:background="@color/White"-->
+            <!--tools:srcCompat="@color/White" />-->
+
+            <!--<ImageView-->
+            <!--android:id="@+id/full10"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="0"-->
+            <!--android:background="@color/Black"-->
+            <!--tools:srcCompat="@color/Black" />-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/time10"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="5"-->
+            <!--android:text="10"-->
+            <!--android:textAlignment="center"-->
+            <!--android:textColor="@color/Black"-->
+            <!--android:textSize="16sp"-->
+            <!--android:textStyle="bold" />-->
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+            <!--android:id="@+id/bar11"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:orientation="vertical"-->
+            <!--android:weightSum="110">-->
+
+            <!--<ImageView-->
+            <!--android:id="@+id/empty11"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="100"-->
+            <!--android:background="@color/White"-->
+            <!--tools:srcCompat="@color/White" />-->
+
+            <!--<ImageView-->
+            <!--android:id="@+id/full11"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="0"-->
+            <!--android:background="@color/Black"-->
+            <!--tools:srcCompat="@color/Black" />-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/time11"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="5"-->
+            <!--android:text="11"-->
+            <!--android:textAlignment="center"-->
+            <!--android:textColor="@color/Black"-->
+            <!--android:textSize="16sp"-->
+            <!--android:textStyle="bold" />-->
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+            <!--android:id="@+id/bar12"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:orientation="vertical"-->
+            <!--android:weightSum="110">-->
+
+            <!--<ImageView-->
+            <!--android:id="@+id/empty12"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="90"-->
+            <!--android:background="@color/White"-->
+            <!--tools:srcCompat="@color/White" />-->
+
+            <!--<ImageView-->
+            <!--android:id="@+id/full12"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="10"-->
+            <!--android:background="@color/Black"-->
+            <!--tools:srcCompat="@color/Black" />-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/time12"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="5"-->
+            <!--android:text="12"-->
+            <!--android:textAlignment="center"-->
+            <!--android:textColor="@color/Black"-->
+            <!--android:textSize="16sp"-->
+            <!--android:textStyle="bold" />-->
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+            <!--android:id="@+id/bar13"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:orientation="vertical"-->
+            <!--android:weightSum="110">-->
+
+            <!--<ImageView-->
+            <!--android:id="@+id/empty13"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="70"-->
+            <!--android:background="@color/White"-->
+            <!--tools:srcCompat="@color/White" />-->
+
+            <!--<ImageView-->
+            <!--android:id="@+id/full13"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="30"-->
+            <!--android:background="@color/Black"-->
+            <!--tools:srcCompat="@color/Black" />-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/time13"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="5"-->
+            <!--android:text="13"-->
+            <!--android:textAlignment="center"-->
+            <!--android:textColor="@color/Black"-->
+            <!--android:textSize="16sp"-->
+            <!--android:textStyle="bold" />-->
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+            <!--android:id="@+id/bar14"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:orientation="vertical"-->
+            <!--android:weightSum="110">-->
+
+            <!--<ImageView-->
+            <!--android:id="@+id/empty14"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="50"-->
+            <!--android:background="@color/White"-->
+            <!--tools:srcCompat="@color/White" />-->
+
+            <!--<ImageView-->
+            <!--android:id="@+id/full14"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="50"-->
+            <!--android:background="@color/Black"-->
+            <!--tools:srcCompat="@color/Black" />-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/time14"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="5"-->
+            <!--android:text="14"-->
+            <!--android:textAlignment="center"-->
+            <!--android:textColor="@color/Black"-->
+            <!--android:textSize="16sp"-->
+            <!--android:textStyle="bold" />-->
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+            <!--android:id="@+id/bar15"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:orientation="vertical"-->
+            <!--android:weightSum="110">-->
+
+            <!--<ImageView-->
+            <!--android:id="@+id/empty15"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="5"-->
+            <!--android:background="@color/White"-->
+            <!--tools:srcCompat="@color/White" />-->
+
+            <!--<ImageView-->
+            <!--android:id="@+id/full15"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="95"-->
+            <!--android:background="@color/Black"-->
+            <!--tools:srcCompat="@color/Black" />-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/time15"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="5"-->
+            <!--android:text="15"-->
+            <!--android:textAlignment="center"-->
+            <!--android:textColor="@color/Black"-->
+            <!--android:textSize="16sp"-->
+            <!--android:textStyle="bold" />-->
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+            <!--android:id="@+id/bar16"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:orientation="vertical"-->
+            <!--android:weightSum="110">-->
+
+            <!--<ImageView-->
+            <!--android:id="@+id/empty16"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="100"-->
+            <!--android:background="@color/White"-->
+            <!--tools:srcCompat="@color/White" />-->
+
+            <!--<ImageView-->
+            <!--android:id="@+id/full16"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="0"-->
+            <!--android:background="@color/Black"-->
+            <!--tools:srcCompat="@color/Black" />-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/time16"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="5"-->
+            <!--android:text="16"-->
+            <!--android:textAlignment="center"-->
+            <!--android:textColor="@color/Black"-->
+            <!--android:textSize="16sp"-->
+            <!--android:textStyle="bold" />-->
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+            <!--android:id="@+id/bar17"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:orientation="vertical"-->
+            <!--android:weightSum="110">-->
+
+            <!--<ImageView-->
+            <!--android:id="@+id/empty17"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="100"-->
+            <!--android:background="@color/White"-->
+            <!--tools:srcCompat="@color/White" />-->
+
+            <!--<ImageView-->
+            <!--android:id="@+id/full17"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="0"-->
+            <!--android:background="@color/Black"-->
+            <!--tools:srcCompat="@color/Black" />-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/time17"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="5"-->
+            <!--android:text="17"-->
+            <!--android:textAlignment="center"-->
+            <!--android:textColor="@color/Black"-->
+            <!--android:textSize="16sp"-->
+            <!--android:textStyle="bold" />-->
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+            <!--android:id="@+id/bar18"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:orientation="vertical"-->
+            <!--android:weightSum="110">-->
+
+            <!--<ImageView-->
+            <!--android:id="@+id/empty18"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="100"-->
+            <!--android:background="@color/White"-->
+            <!--tools:srcCompat="@color/White" />-->
+
+            <!--<ImageView-->
+            <!--android:id="@+id/full18"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="0"-->
+            <!--android:background="@color/Black"-->
+            <!--tools:srcCompat="@color/Black" />-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/time18"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="5"-->
+            <!--android:text="18"-->
+            <!--android:textAlignment="center"-->
+            <!--android:textColor="@color/Black"-->
+            <!--android:textSize="16sp"-->
+            <!--android:textStyle="bold" />-->
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+            <!--android:id="@+id/bar19"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:orientation="vertical"-->
+            <!--android:weightSum="110">-->
+
+            <!--<ImageView-->
+            <!--android:id="@+id/empty19"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="100"-->
+            <!--android:background="@color/White"-->
+            <!--tools:srcCompat="@color/White" />-->
+
+            <!--<ImageView-->
+            <!--android:id="@+id/full19"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="0"-->
+            <!--android:background="@color/Black"-->
+            <!--tools:srcCompat="@color/Black" />-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/time19"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="5"-->
+            <!--android:text="19"-->
+            <!--android:textAlignment="center"-->
+            <!--android:textColor="@color/Black"-->
+            <!--android:textSize="16sp"-->
+            <!--android:textStyle="bold" />-->
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+            <!--android:id="@+id/bar20"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:orientation="vertical"-->
+            <!--android:weightSum="110">-->
+
+            <!--<ImageView-->
+            <!--android:id="@+id/empty20"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="100"-->
+            <!--android:background="@color/White"-->
+            <!--tools:srcCompat="@color/White" />-->
+
+            <!--<ImageView-->
+            <!--android:id="@+id/full20"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="0"-->
+            <!--android:background="@color/Black"-->
+            <!--tools:srcCompat="@color/Black" />-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/time20"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="5"-->
+            <!--android:text="20"-->
+            <!--android:textAlignment="center"-->
+            <!--android:textColor="@color/Black"-->
+            <!--android:textSize="16sp"-->
+            <!--android:textStyle="bold" />-->
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+            <!--android:id="@+id/bar21"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:orientation="vertical"-->
+            <!--android:weightSum="110">-->
+
+            <!--<ImageView-->
+            <!--android:id="@+id/empty21"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="100"-->
+            <!--android:background="@color/White"-->
+            <!--tools:srcCompat="@color/White" />-->
+
+            <!--<ImageView-->
+            <!--android:id="@+id/full21"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="0"-->
+            <!--android:background="@color/Black"-->
+            <!--tools:srcCompat="@color/Black" />-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/time21"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="5"-->
+            <!--android:text="21"-->
+            <!--android:textAlignment="center"-->
+            <!--android:textColor="@color/Black"-->
+            <!--android:textSize="16sp"-->
+            <!--android:textStyle="bold" />-->
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+            <!--android:id="@+id/bar22"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:orientation="vertical"-->
+            <!--android:weightSum="110">-->
+
+            <!--<ImageView-->
+            <!--android:id="@+id/empty22"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="100"-->
+            <!--android:background="@color/White"-->
+            <!--tools:srcCompat="@color/White" />-->
+
+            <!--<ImageView-->
+            <!--android:id="@+id/full22"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="0"-->
+            <!--android:background="@color/Black"-->
+            <!--tools:srcCompat="@color/Black" />-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/time22"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="5"-->
+            <!--android:text="22"-->
+            <!--android:textAlignment="center"-->
+            <!--android:textColor="@color/Black"-->
+            <!--android:textSize="16sp"-->
+            <!--android:textStyle="bold" />-->
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+            <!--android:id="@+id/bar23"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:orientation="vertical"-->
+            <!--android:weightSum="110">-->
+
+            <!--<ImageView-->
+            <!--android:id="@+id/empty23"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="100"-->
+            <!--android:background="@color/White"-->
+            <!--tools:srcCompat="@color/White" />-->
+
+            <!--<ImageView-->
+            <!--android:id="@+id/full23"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="0"-->
+            <!--android:background="@color/Black"-->
+            <!--tools:srcCompat="@color/Black" />-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/time23"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="5"-->
+            <!--android:text="23"-->
+            <!--android:textAlignment="center"-->
+            <!--android:textColor="@color/Black"-->
+            <!--android:textSize="16sp"-->
+            <!--android:textStyle="bold" />-->
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+            <!--android:id="@+id/bar24"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:orientation="vertical"-->
+            <!--android:weightSum="110">-->
+
+            <!--<ImageView-->
+            <!--android:id="@+id/empty24"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="100"-->
+            <!--android:background="@color/White"-->
+            <!--tools:srcCompat="@color/White" />-->
+
+            <!--<ImageView-->
+            <!--android:id="@+id/full24"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="0"-->
+            <!--android:background="@color/Black"-->
+            <!--tools:srcCompat="@color/Black" />-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/time24"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="5"-->
+            <!--android:text="24"-->
+            <!--android:textAlignment="center"-->
+            <!--android:textColor="@color/Black"-->
+            <!--android:textSize="16sp"-->
+            <!--android:textStyle="bold" />-->
+            <!--</LinearLayout>-->
+
+            <!--</LinearLayout>-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="19">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:weightSum="11">
+
+                    <ProgressBar
+                        android:id="@+id/bar06"
+                        style="@android:style/Widget.ProgressBar.Horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="10"
+                        android:max="100"
+                        android:progress="100"
+                        android:progressDrawable="@drawable/custom_pb" />
+
+                    <TextView
+                        android:id="@+id/time06"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="06"
+                        android:textAlignment="center"
+                        android:textColor="@color/Black"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:weightSum="11">
+
+                    <ProgressBar
+                        android:id="@+id/bar07"
+                        style="@android:style/Widget.ProgressBar.Horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="10"
+                        android:max="100"
+                        android:progress="100"
+                        android:progressDrawable="@drawable/custom_pb" />
+
+                    <TextView
+                        android:id="@+id/time07"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="07"
+                        android:textAlignment="center"
+                        android:textColor="@color/Black"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:weightSum="11">
+
+                    <ProgressBar
+                        android:id="@+id/bar08"
+                        style="@android:style/Widget.ProgressBar.Horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="10"
+                        android:max="100"
+                        android:progress="100"
+                        android:progressDrawable="@drawable/custom_pb" />
+
+                    <TextView
+                        android:id="@+id/time08"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="08"
+                        android:textAlignment="center"
+                        android:textColor="@color/Black"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:weightSum="11">
+
+                    <ProgressBar
+                        android:id="@+id/bar09"
+                        style="@android:style/Widget.ProgressBar.Horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="10"
+                        android:max="100"
+                        android:progress="100"
+                        android:progressDrawable="@drawable/custom_pb" />
+
+                    <TextView
+                        android:id="@+id/time09"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="09"
+                        android:textAlignment="center"
+                        android:textColor="@color/Black"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:weightSum="11">
+
+                    <ProgressBar
+                        android:id="@+id/bar10"
+                        style="@android:style/Widget.ProgressBar.Horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="10"
+                        android:max="100"
+                        android:progress="100"
+                        android:progressDrawable="@drawable/custom_pb" />
+
+                    <TextView
+                        android:id="@+id/time10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="10"
+                        android:textAlignment="center"
+                        android:textColor="@color/Black"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:weightSum="11">
+
+                    <ProgressBar
+                        android:id="@+id/bar11"
+                        style="@android:style/Widget.ProgressBar.Horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="10"
+                        android:max="100"
+                        android:progress="100"
+                        android:progressDrawable="@drawable/custom_pb" />
+
+                    <TextView
+                        android:id="@+id/time11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="11"
+                        android:textAlignment="center"
+                        android:textColor="@color/Black"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:weightSum="11">
+
+                    <ProgressBar
+                        android:id="@+id/bar12"
+                        style="@android:style/Widget.ProgressBar.Horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="10"
+                        android:max="100"
+                        android:progress="100"
+                        android:progressDrawable="@drawable/custom_pb" />
+
+                    <TextView
+                        android:id="@+id/time12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="12"
+                        android:textAlignment="center"
+                        android:textColor="@color/Black"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:weightSum="11">
+
+                    <ProgressBar
+                        android:id="@+id/bar13"
+                        style="@android:style/Widget.ProgressBar.Horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="10"
+                        android:max="100"
+                        android:progress="100"
+                        android:progressDrawable="@drawable/custom_pb" />
+
+                    <TextView
+                        android:id="@+id/time13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="13"
+                        android:textAlignment="center"
+                        android:textColor="@color/Black"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:weightSum="11">
+
+                    <ProgressBar
+                        android:id="@+id/bar14"
+                        style="@android:style/Widget.ProgressBar.Horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="10"
+                        android:max="100"
+                        android:progress="100"
+                        android:progressDrawable="@drawable/custom_pb" />
+
+                    <TextView
+                        android:id="@+id/time14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="14"
+                        android:textAlignment="center"
+                        android:textColor="@color/Black"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:weightSum="11">
+
+                    <ProgressBar
+                        android:id="@+id/bar15"
+                        style="@android:style/Widget.ProgressBar.Horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="10"
+                        android:max="100"
+                        android:progress="100"
+                        android:progressDrawable="@drawable/custom_pb" />
+
+                    <TextView
+                        android:id="@+id/time15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="15"
+                        android:textAlignment="center"
+                        android:textColor="@color/Black"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:weightSum="11">
+
+                    <ProgressBar
+                        android:id="@+id/bar16"
+                        style="@android:style/Widget.ProgressBar.Horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="10"
+                        android:max="100"
+                        android:progress="100"
+                        android:progressDrawable="@drawable/custom_pb" />
+
+                    <TextView
+                        android:id="@+id/time16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="16"
+                        android:textAlignment="center"
+                        android:textColor="@color/Black"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:weightSum="11">
+
+                    <ProgressBar
+                        android:id="@+id/bar17"
+                        style="@android:style/Widget.ProgressBar.Horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="10"
+                        android:max="100"
+                        android:progress="100"
+                        android:progressDrawable="@drawable/custom_pb" />
+
+                    <TextView
+                        android:id="@+id/time17"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="17"
+                        android:textAlignment="center"
+                        android:textColor="@color/Black"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:weightSum="11">
+
+                    <ProgressBar
+                        android:id="@+id/bar18"
+                        style="@android:style/Widget.ProgressBar.Horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="10"
+                        android:max="100"
+                        android:progress="100"
+                        android:progressDrawable="@drawable/custom_pb" />
+
+                    <TextView
+                        android:id="@+id/time18"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="18"
+                        android:textAlignment="center"
+                        android:textColor="@color/Black"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:weightSum="11">
+
+                    <ProgressBar
+                        android:id="@+id/bar19"
+                        style="@android:style/Widget.ProgressBar.Horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="10"
+                        android:max="100"
+                        android:progress="100"
+                        android:progressDrawable="@drawable/custom_pb" />
+
+                    <TextView
+                        android:id="@+id/time19"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="19"
+                        android:textAlignment="center"
+                        android:textColor="@color/Black"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:weightSum="11">
+
+                    <ProgressBar
+                        android:id="@+id/bar20"
+                        style="@android:style/Widget.ProgressBar.Horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="10"
+                        android:max="100"
+                        android:progress="100"
+                        android:progressDrawable="@drawable/custom_pb" />
+
+                    <TextView
+                        android:id="@+id/time20"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="20"
+                        android:textAlignment="center"
+                        android:textColor="@color/Black"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:weightSum="11">
+
+                    <ProgressBar
+                        android:id="@+id/bar21"
+                        style="@android:style/Widget.ProgressBar.Horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="10"
+                        android:max="100"
+                        android:progress="100"
+                        android:progressDrawable="@drawable/custom_pb" />
+
+                    <TextView
+                        android:id="@+id/time21"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="21"
+                        android:textAlignment="center"
+                        android:textColor="@color/Black"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:weightSum="11">
+
+                    <ProgressBar
+                        android:id="@+id/bar22"
+                        style="@android:style/Widget.ProgressBar.Horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="10"
+                        android:max="100"
+                        android:progress="100"
+                        android:progressDrawable="@drawable/custom_pb" />
+
+                    <TextView
+                        android:id="@+id/time22"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="22"
+                        android:textAlignment="center"
+                        android:textColor="@color/Black"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:weightSum="11">
+
+                    <ProgressBar
+                        android:id="@+id/bar23"
+                        style="@android:style/Widget.ProgressBar.Horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="10"
+                        android:max="100"
+                        android:progress="100"
+                        android:progressDrawable="@drawable/custom_pb" />
+
+                    <TextView
+                        android:id="@+id/time23"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="23"
+                        android:textAlignment="center"
+                        android:textColor="@color/Black"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:weightSum="11">
+
+                    <ProgressBar
+                        android:id="@+id/bar24"
+                        style="@android:style/Widget.ProgressBar.Horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="10"
+                        android:max="100"
+                        android:progress="100"
+                        android:progressDrawable="@drawable/custom_pb" />
+
+                    <TextView
+                        android:id="@+id/time24"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="24"
+                        android:textAlignment="center"
+                        android:textColor="@color/Black"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+            <Button
+                android:id="@+id/going"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:text="Go" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
