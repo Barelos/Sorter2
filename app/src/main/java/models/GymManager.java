@@ -104,8 +104,8 @@ class CompareCapacity implements Comparator<Gym> {
 class CompareCurrentCapacity implements Comparator<Gym> {
     @Override
     public int compare(Gym o1, Gym o2) {
-        o1.setDiscription(String.valueOf(o1.getCurrentCapacity()));
-        o2.setDiscription(String.valueOf(o2.getCurrentCapacity()));
+        o1.setDiscription(String.valueOf((int) (o1.getCurrentCapacity() * o1.getCapacity())));
+        o2.setDiscription(String.valueOf((int) (o2.getCurrentCapacity() * o2.getCapacity())));
         return (int) signum(o1.getCurrentCapacity() - o2.getCurrentCapacity());
     }
 }

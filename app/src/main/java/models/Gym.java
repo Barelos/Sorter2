@@ -119,7 +119,7 @@ public class Gym {
         capacity = Gym.capacities[idx];
         currentCapacity = Gym.currentCapacities[idx];
         hourlyCapacity = Gym.hourlyCapacities[idx];
-        discription = Gym.descriptions[idx];
+        discription = String.valueOf(scores[idx]);
         image = images[idx];
         score = scores[idx];
         location = new LatLng(Latitudes[idx], Langtitudes[idx]);

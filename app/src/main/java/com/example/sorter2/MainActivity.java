@@ -243,7 +243,6 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewAdapt
     }
 
     private void goToGym(Gym gym){
-        Toast.makeText(this, gym.getName(), Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(this, GymViewActivity.class);
         intent.putExtra("icon_path", gym.getImage());
         intent.putExtra("title_path", gym.getName());
@@ -329,7 +328,7 @@ public class MainActivity extends AppCompatActivity implements RecyclerViewAdapt
 
     @Override
     public void onDialogPositiveClick(DialogFragment dialog) {
-        getLastKnownLocation();
+        // getLastKnownLocation();
         SortDialogFragment df = (SortDialogFragment) dialog;
         gm.sort(GymManager.SortFunction.values()[df.spinnerFunc.getSelectedItemPosition()]);
         initRecyclerView();
